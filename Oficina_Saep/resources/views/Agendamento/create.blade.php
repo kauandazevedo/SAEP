@@ -29,18 +29,18 @@
 
         <br><br>
 
-        <label>Veículo:</label>
+        <label>Pet:</label>
 
-        <select name="veiculo_id">
+        <select name="pet_id">
 
             <option value="">
-                Selecione um veiculo
+                Selecione um pet
             </option>
 
-            @foreach($veiculos as $veiculo)
+            @foreach($pets as $pet)
 
-                <option value="{{ $veiculo->id }}">
-                    {{ $veiculo->placa }}
+                <option value="{{ $pet->id }}">
+                    {{ $pet->nome }}
                 </option>
 
             @endforeach

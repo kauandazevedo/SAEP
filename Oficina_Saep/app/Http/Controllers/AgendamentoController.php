@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Agendamento;
-use App\Models\Cliente;
-use App\Models\Veiculo;
+use App\Models\Tutor;
+use App\Models\Pet;
 use Illuminate\Http\Request;
 
 class AgendamentoController extends Controller
@@ -20,10 +20,10 @@ class AgendamentoController extends Controller
 
     public function create()
     {
-        $clientes = Cliente::all();
-        $veiculos = Veiculo::all();
+        $tutores = Tutor::all();
+        $pets = Pet::all();
 
-        return view('agendamento.create', compact('veiculos', 'clientes'));
+        return view('agendamento.create', compact('pets', 'tutores'));
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class AgendamentoController extends Controller
             'data' => $request->data,
             'hora' => $request->hora,
             'descricao' => $request->descricao,
-            'veiculo_id' => $request->veiculo_id,
+            'pet_id' => $request->pet_id,
         ]);
 
         return redirect()->back()->with('success','Cadastrado com sucesso!');
@@ -42,9 +42,9 @@ class AgendamentoController extends Controller
     {
         $agendamento = Agendamento::findOrFail($id);
 
-        $veiculos = Veiculo::all();
+        $pets = Pet::all();
 
-        return view('agendamento.edit',compact('agendamento', 'veiculos'));
+        return view('agendamento.edit',compact('agendamento', 'pets'));
     }
 
     public function update(Request $request, $id)
@@ -55,7 +55,7 @@ class AgendamentoController extends Controller
             'data' => $request->data,
             'hora' => $request->hora,
             'descricao' => $request->descricao,
-            'veiculo_id' => $request->veiculo_id,
+            'pet_id' => $request->pet_id,
         ]);
 
         return redirect()->back()->with('success','Atualizado com sucesso!');

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Novo Cliente</title>
+    <title>Novo Tutor</title>
 </head>
 <body>
 
-    <h1>Novo Cliente</h1>
+    <h1>Novo Tutor</h1>
 
-    <form action="/clientes" method="POST">
+    <form action="/tutores" method="POST">
 
         @csrf
 
@@ -39,7 +39,7 @@
 
     <br>
 
-    <a href="/clientes/listar">
+    <a href="/tutores/listar">
         Voltar
     </a>
 

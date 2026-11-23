@@ -42,17 +42,17 @@
 
         <br><br>
 
-        <label>Veiculo:</label>
+        <label>Pet:</label>
 
-        <select name="veiculo_id">
+        <select name="pet_id">
 
-            @foreach($veiculos as $veiculo)
+            @foreach($pets as $pet)
 
                 <option
-                    value="{{ $veiculo->id }}"
-                    {{ $agendamento->veiculo_id == $veiculo->id ? 'selected' : '' }}
+                    value="{{ $pet->id }}"
+                    {{ $agendamento->pet_id == $pet->id ? 'selected' : '' }}
                 >
-                    {{ $veiculo->placa }}
+                    {{ $pet->nome }}
                 </option>
 
             @endforeach

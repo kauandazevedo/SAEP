@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Editar Cliente</title>
+    <title>Editar Tutor</title>
 </head>
 <body>
 
-    <h1>Editar Cliente</h1>
+    <h1>Editar Tutor</h1>
 
-    <form action="/clientes/{{ $cliente->id }}" method="POST">
+    <form action="/tutores/{{ $tutor->id }}" method="POST">
 
         @csrf
         @method('PUT')
@@ -17,7 +17,7 @@
         <input
             type="text"
             name="nome"
-            value="{{ $cliente->nome }}"
+            value="{{ $tutor->nome }}"
         >
 
         <br><br>
@@ -27,7 +27,7 @@
         <input
             type="text"
             name="cpf"
-            value="{{ $cliente->cpf }}"
+            value="{{ $tutor->cpf }}"
         >
 
         <br><br>
@@ -37,7 +37,7 @@
         <input
             type="text"
             name="telefone"
-            value="{{ $cliente->telefone }}"
+            value="{{ $tutor->telefone }}"
         >
 
         <br><br>
@@ -47,7 +47,7 @@
         <input
             type="email"
             name="email"
-            value="{{ $cliente->email }}"
+            value="{{ $tutor->email }}"
         >
 
         <br><br>
@@ -60,7 +60,7 @@
 
     <br>
 
-    <a href="/clientes/listar">
+    <a href="/tutores/listar">
         Voltar
     </a>
 

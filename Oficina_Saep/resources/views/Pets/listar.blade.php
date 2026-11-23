@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Veículos</title>
+    <title>Pets</title>
 </head>
 <body>
 
-    <h1>Veículos</h1>
+    <h1>Pets</h1>
 
     <a href="/principal">
         Voltar
@@ -13,8 +13,8 @@
 
     <br><br>
 
-    <a href="/veiculos/create">
-        <button>Novo Veículos</button>
+    <a href="/pets/create">
+        <button>Novo Pets</button>
     </a>
 
     <br><br>
@@ -23,37 +23,37 @@
 
         <tr>
             <th>ID</th>
-            <th>Placa</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Cliente</th>
+            <th>Nome</th>
+            <th>Especie</th>
+            <th>Raca</th>
+            <th>Tutor</th>
             <th>Ações</th>
         </tr>
 
-        @foreach($veiculos as $veiculo)
+        @foreach($pets as $pet)
 
         <tr>
 
-            <td>{{ $veiculo->id }}</td>
+            <td>{{ $pet->id }}</td>
 
-            <td>{{ $veiculo->placa }}</td>
+            <td>{{ $pet->nome }}</td>
 
-            <td>{{ $veiculo->marca }}</td>
+            <td>{{ $pet->especie }}</td>
 
-            <td>{{ $veiculo->modelo }}</td>
+            <td>{{ $pet->raca }}</td>
 
             <td>
-                {{ $veiculo->cliente->nome }}
+                {{ $pet->tutor->nome }}
             </td>
 
             <td>
 
-                <a href="/veiculos/{{ $veiculo->id }}/edit">
+                <a href="/pets/{{ $pet->id }}/edit">
                     Editar
                 </a>
 
                 <form
-                    action="/veiculos/{{ $veiculo->id }}"
+                    action="/pets/{{ $pet->id }}"
                     method="POST"
                     style="display:inline"
                 >

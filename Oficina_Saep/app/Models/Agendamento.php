@@ -12,13 +12,13 @@ class Agendamento extends Model
         'data',
         'hora',
         'descricao',
-        'veiculo_id',
+        'pet_id',
     ];
 
     public $timestamps = true;
 
-    public function veiculo()
+    public function pet()
     {
-        return $this->belongsTo(Veiculo::class);
+        return $this->belongsTo(Pet::class);
     }
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Clientes</title>
+    <title>Tutores</title>
 </head>
 <body>
 
-    <h1>Clientes</h1>
+    <h1>Tutores</h1>
 
     <a href="/principal">
         Voltar
@@ -13,13 +13,13 @@
 
     <br><br>
 
-    <a href="/clientes/create">
-        <button>Novo Cliente</button>
+    <a href="/tutores/create">
+        <button>Novo Tutor</button>
     </a>
 
-    <h2>Buscar Cliente</h2>
+    <h2>Buscar Tutor</h2>
 
-    <form action="/clientes/listar" method="GET">
+    <form action="/tutores/listar" method="GET">
 
         <input
             type="text"
@@ -47,28 +47,28 @@
             <th>Ações</th>
         </tr>
 
-        @foreach($clientes as $cliente)
+        @foreach($tutores as $tutor)
 
         <tr>
 
-            <td>{{ $cliente->id }}</td>
+            <td>{{ $tutor->id }}</td>
 
-            <td>{{ $cliente->nome }}</td>
+            <td>{{ $tutor->nome }}</td>
 
-            <td>{{ $cliente->cpf }}</td>
+            <td>{{ $tutor->cpf }}</td>
 
-            <td>{{ $cliente->telefone }}</td>
+            <td>{{ $tutor->telefone }}</td>
 
-            <td>{{ $cliente->email }}</td>
+            <td>{{ $tutor->email }}</td>
 
             <td>
 
-                <a href="/clientes/{{ $cliente->id }}/edit">
+                <a href="/tutores/{{ $tutor->id }}/edit">
                     Editar
                 </a>
 
                 <form
-                    action="/clientes/{{ $cliente->id }}"
+                    action="/tutores/{{ $tutor->id }}"
                     method="POST"
                     style="display:inline"
                 >

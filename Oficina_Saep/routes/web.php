@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
-use App\Http\Controllers\ClienteController;
-use App\Http\Controllers\VeiculoController;
+use App\Http\Controllers\TutorController;
+use App\Http\Controllers\PetController;
 use App\Http\Controllers\AgendamentoController;
 
 Route::get('/', [UsuarioController::class, 'login']);
@@ -14,23 +14,23 @@ Route::get('/principal', function () {
     return view('principal');
 });
 
-// Clientes
+// Tutores
 
-Route::get('/clientes/listar', [ClienteController::class, 'listar']);
-Route::get('/clientes/create', [ClienteController::class, 'create']);
-Route::post('/clientes', [ClienteController::class, 'store']);
-Route::get('/clientes/{id}/edit', [ClienteController::class, 'edit']);
-Route::put('/clientes/{id}', [ClienteController::class, 'update']);
-Route::delete('/clientes/{id}', [ClienteController::class, 'destroy']);
+Route::get('/tutores/listar', [TutorController::class, 'listar']);
+Route::get('/tutores/create', [TutorController::class, 'create']);
+Route::post('/tutores', [TutorController::class, 'store']);
+Route::get('/tutores/{id}/edit', [TutorController::class, 'edit']);
+Route::put('/tutores/{id}', [TutorController::class, 'update']);
+Route::delete('/tutores/{id}', [TutorController::class, 'destroy']);
 
-// Veiculos
+// Pets
 
-Route::get('/veiculos/listar', [VeiculoController::class, 'listar']);
-Route::get('/veiculos/create', [VeiculoController::class, 'create']);
-Route::post('/veiculos', [VeiculoController::class, 'store']);
-Route::get('/veiculos/{id}/edit', [VeiculoController::class, 'edit']);
-Route::put('/veiculos/{id}', [VeiculoController::class, 'update']);
-Route::delete('/veiculos/{id}', [VeiculoController::class, 'destroy']);
+Route::get('/pets/listar', [PetController::class, 'listar']);
+Route::get('/pets/create', [PetController::class, 'create']);
+Route::post('/pets', [PetController::class, 'store']);
+Route::get('/pets/{id}/edit', [PetController::class, 'edit']);
+Route::put('/pets/{id}', [PetController::class, 'update']);
+Route::delete('/pets/{id}', [PetController::class, 'destroy']);
 
 // Agendamentos
 

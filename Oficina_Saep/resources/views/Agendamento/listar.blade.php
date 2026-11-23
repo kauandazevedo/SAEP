@@ -25,8 +25,8 @@
             <th>ID</th>
             <th>Data</th>
             <th>Hora</th>
-            <th>Cliente</th>
-            <th>Veiculo</th>
+            <th>Tutor</th>
+            <th>Pet</th>
             <th>Descrição</th>
             <th>Ações</th>
         </tr>
@@ -46,11 +46,11 @@
             </td>
 
             <td>
-                {{ $agendamento->veiculo->cliente->nome }}
+                {{ $agendamento->pet->tutor->nome }}
             </td>
 
             <td>
-                {{ $agendamento->veiculo->placa }}
+                {{ $agendamento->pet->nome }}
             </td>
 
             <td>
